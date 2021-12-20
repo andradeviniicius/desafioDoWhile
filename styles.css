@@ -30,30 +30,49 @@ nav {
   font-family: "Roboto",cursive;
   padding: 10px;
   color: white;
+  -webkit-transition: .4s ease-in-out;
+  transition: .4s ease-in-out;
 }
 
 nav a {
   text-decoration: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  color: white;
+  font-size: 18px;
+  margin-left: 10px;
+  font-weight: 700;
+  text-align: end;
+  cursor: pointer;
+  text-decoration: none;
 }
 
-nav a button {
-  border: none;
-  color: white;
-  font-weight: 600;
-  background: -webkit-gradient(linear, left top, right top, from(#05018e), color-stop(50%, #7004ae), to(#fa00f2));
-  background: linear-gradient(90deg, #05018e 0%, #7004ae 50%, #fa00f2 100%);
-  border-radius: 4px;
-  padding: 0px 15px;
-  width: 100px;
-  height: 35px;
-  text-align: center;
-  cursor: pointer;
+nav .headerLogo {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
 }
 
 nav .headerLogo h1 {
   font-size: 18px;
   margin-left: 10px;
-  font-weight: 900;
+  font-weight: 700;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+nav .headerLogo img {
+  content: url("https://www.pngkit.com/png/full/213-2132844_experience-the-discussion-online-library-book-logo-png.png");
+  -webkit-filter: invert(29%) sepia(77%) saturate(7488%) hue-rotate(210deg) brightness(96%) contrast(91%);
+          filter: invert(29%) sepia(77%) saturate(7488%) hue-rotate(210deg) brightness(96%) contrast(91%);
 }
 
 nav .nav-links {
@@ -61,12 +80,17 @@ nav .nav-links {
   display: -ms-flexbox;
   display: flex;
   padding: 12px 12px;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   width: 35%;
 }
 
 nav .nav-links a {
+  color: grey;
+}
+
+nav .nav-links a:hover {
   color: white;
 }
 
@@ -76,12 +100,11 @@ nav .nav-links li {
   display: flex;
   margin: 0px 10px 0px 10px;
   list-style: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  position: relative;
+  top: 4px;
 }
 
 nav .sideButton {
@@ -108,12 +131,18 @@ nav .sideButton div {
     overflow-x: hidden;
   }
   nav {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
   nav .sideButton {
     display: block;
     cursor: pointer;
+  }
+  nav .nav-links {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
   .nav-links {
     position: absolute;
@@ -137,9 +166,12 @@ nav .sideButton div {
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .nav-links li {
     opacity: 0;
+    padding: 10px 0px;
   }
 }
 
@@ -157,8 +189,6 @@ nav .sideButton div {
 .headerLogo img {
   width: 60px;
   height: 30px;
-  content: url("https://www.pngkit.com/png/full/213-2132844_experience-the-discussion-online-library-book-logo-png.png");
-  filter: invert(29%) sepia(77%) saturate(7488%) hue-rotate(210deg) brightness(96%) contrast(91%);
 }
 
 .nav-active {
@@ -242,6 +272,7 @@ nav .sideButton div {
 }
 
 .main-banner p {
+  margin: 10px;
   font-family: Roboto;
   font-style: normal;
   font-weight: 300;
@@ -264,11 +295,16 @@ nav .sideButton div {
   letter-spacing: 0.06em;
   -webkit-transition: 0.1s ease-in-out;
   transition: 0.1s ease-in-out;
+  cursor: pointer;
 }
 
 .main-banner button:hover {
   -webkit-filter: brightness(150%);
           filter: brightness(150%);
+}
+
+.contentContainer {
+  margin: 20px;
 }
 
 footer {
@@ -299,9 +335,22 @@ footer .userInfo {
           justify-content: center;
   padding: 24px;
   margin: 0px 32px;
+  width: 80%;
+  height: 80%;
 }
 
-footer .userInfo #viniImg {
+footer .footerDivImg {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  height: 105px;
+  width: 1fr;
+}
+
+footer .footerDivImg #viniImg {
   background-image: url(https://avatars.githubusercontent.com/u/83192227?v=4);
   background-size: cover;
   background-position: center;
@@ -309,27 +358,31 @@ footer .userInfo #viniImg {
   height: 80px;
 }
 
-footer div {
+footer .footerDivAuthor {
   -ms-flex-pack: distribute;
       justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   height: 100%;
   padding: 0px 12px;
+  width: 2fr;
 }
 
-footer div .authorName {
+footer .footerDivAuthor h2 {
   color: #FFFFFF;
 }
 
-footer div p {
+footer .footerDivAuthor p {
   color: #FFFFFF;
   font-weight: 400;
 }
 
-footer div .gitImg {
+footer .footerDivAuthor .gitImg {
   content: url(../images/github-icon.svg);
 }
 
-footer div .linkImg {
+footer .footerDivAuthor .linkImg {
   content: url(../images/linkedin-3-16.png);
 }
 

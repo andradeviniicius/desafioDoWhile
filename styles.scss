@@ -1,7 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Luxurious+Script&display=swap');
-
 * {
   margin: 0px;
   padding: 0px;
@@ -25,46 +24,69 @@ nav {
   font-family: "Roboto",cursive;
   padding: 10px;
   color: white;
+  transition: .4s ease-in-out;
   a{
-    button {
-        border: none;
-        color: white;
-        font-weight: 600;
-        background: linear-gradient(90deg, hsla(242, 99%, 28%, 1) 0%, hsla(278, 95%, 35%, 1) 50%, hsla(302, 100%, 49%, 1) 100%);
-        border-radius: 4px;
-        padding: 0px 15px;
-        width: 100px;
-        height: 35px;
-        text-align: center;
-        cursor: pointer;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-start;
+    color: white;
+    font-size: 18px;
+    margin-left: 10px ;
+    font-weight: 700;
+    text-align:end;
+    cursor: pointer;
     
-      }
+    // Projeto Botão de login
+
+    // button {
+    //     border: none;
+    //     color: white;
+    //     font-weight: 600;
+    //     background: linear-gradient(90deg, hsla(242, 99%, 28%, 1) 0%, hsla(278, 95%, 35%, 1) 50%, hsla(302, 100%, 49%, 1) 100%);
+    //     border-radius: 4px;
+    //     padding: 0px 15px;
+    //     width: 100px;
+    //     height: 35px;
+    //     text-align: center;
+    //     cursor: pointer;
+    
+      // }
       text-decoration: none;
     }
   
   
   .headerLogo {
-
+    align-items: flex-end;
     h1 {
       font-size: 18px;
       margin-left: 10px ;
-      font-weight: 900;
+      font-weight: 700;
+      display: flex;
+      align-items:flex-end;
+    }
+    img {
+      content: url("https://www.pngkit.com/png/full/213-2132844_experience-the-discussion-online-library-book-logo-png.png");
+      filter: invert(29%) sepia(77%) saturate(7488%) hue-rotate(210deg) brightness(96%) contrast(91%);
     }
   }
   .nav-links {
     display: flex;
     padding: 12px 12px;
-    justify-content: space-around;
+    justify-content: flex-end;
     width: 35%;
     a {
+      color: grey;
+    }
+    a:hover {
       color: white;
     }
     li {
       display: flex;
       margin: 0px 10px 0px 10px;
       list-style: none;
-      align-items: center;
       justify-content: center;
+      position: relative;
+      top: 4px;
     }
   }
   .sideButton {
@@ -93,11 +115,14 @@ nav {
   }
   
   nav {
-    justify-content: space-around ;
+    justify-content: space-between ;
     
     .sideButton {
       display: block;
       cursor: pointer;
+    }
+    .nav-links {
+      justify-content: flex-start;
     }
   }
   .nav-links {
@@ -111,9 +136,11 @@ nav {
     width: 50%;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
+    justify-content: space-around;
   }
   .nav-links li {
     opacity: 0;
+    padding: 10px 0px;
   }
 }
 
@@ -157,7 +184,7 @@ nav {
 // Introduction content
 .main-banner {
   background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)),
-    url("../images/mainbanner.jpg");
+    url("https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -179,6 +206,7 @@ nav {
     color: #0b5ed7;
   }
   p {
+    margin: 10px;
     font-family: Roboto;
     font-style: normal;
     font-weight: 300;
@@ -200,10 +228,16 @@ nav {
     font-size: 25px;
     letter-spacing: 0.06em;
     transition: 0.1s ease-in-out;
+    cursor: pointer;
     &:hover {
       filter: brightness(150%);
     }
   }
+}
+
+// Main content
+.contentContainer {
+  margin: 20px;;
 }
 
 
@@ -224,6 +258,14 @@ footer {
     justify-content: center;
     padding: 24px;
     margin: 0px 32px;
+    width: 80%;
+    height: 80%;
+  }
+  .footerDivImg {
+    display: flex;
+    align-items: flex-start;
+    height: 105px;
+    width: 1fr;
     #viniImg {
       background-image: url(https://avatars.githubusercontent.com/u/83192227?v=4);
       background-size: cover;
@@ -231,12 +273,14 @@ footer {
       width: 80px;
       height: 80px;
     }
-  }
-    div{
+    }
+    .footerDivAuthor{
       justify-content: space-around;
+      align-items: flex-start;
       height: 100%;
       padding: 0px 12px;
-      .authorName {
+      width: 2fr;
+      h2 {
         color: #FFFFFF;
       }
       p {
