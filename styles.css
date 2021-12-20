@@ -157,6 +157,8 @@ nav .sideButton div {
 .headerLogo img {
   width: 60px;
   height: 30px;
+  content: url("https://www.pngkit.com/png/full/213-2132844_experience-the-discussion-online-library-book-logo-png.png");
+  filter: invert(29%) sepia(77%) saturate(7488%) hue-rotate(210deg) brightness(96%) contrast(91%);
 }
 
 .nav-active {
@@ -205,8 +207,8 @@ nav .sideButton div {
 }
 
 .main-banner {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("../images/mainbanner.jpg");
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("../images/mainbanner.jpg");
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.6)), to(rgba(0, 0, 0, 0.8))), url("https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg");
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.8)), url("https://i.pinimg.com/originals/51/95/eb/5195ebb8c5f9772deda82aa2937134d3.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
