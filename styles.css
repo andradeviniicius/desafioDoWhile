@@ -26,7 +26,6 @@ nav {
       -ms-flex-align: center;
           align-items: center;
   min-height: 8vh;
-  background-color: transparent;
   font-family: "Roboto",cursive;
   padding: 10px;
   color: white;
@@ -234,6 +233,14 @@ nav .sideButton div {
 .toggle .line3 {
   -webkit-transform: rotate(45deg) translate(-5px, -3px);
           transform: rotate(45deg) translate(-5px, -3px);
+}
+
+.bgDark {
+  background-color: #212529;
+}
+
+.bgTransparent {
+  background-color: transparent;
 }
 
 .main-banner {

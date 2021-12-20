@@ -28,16 +28,16 @@ navSlide();
 
 
 
-// function changeHeaderColor() {
-//   let nav = document.querySelector("#header-page");
-//   if (window.scrollY < 100) {
-//     nav.classList.remove("bg-dark");
-//     nav.classList.add("bg-transparent");
-//   }else if(window.scrollY >= 100){
-//     nav.classList.remove("bg-transparent");
-//     nav.classList.add("bg-dark");
-//   }
-// }
+function changeHeaderColor() {
+  let nav = document.querySelector("#headerPage");
+  if (window.scrollY < 100) {
+    nav.classList.remove("bgDark");
+    nav.classList.add("bgTransparent");
+  }else if(window.scrollY >= 100){
+    nav.classList.remove("bgTransparent");
+    nav.classList.add("bgDark");
+  }
+}
 
-// window.addEventListener('load', changeHeaderColor);
-// window.addEventListener("scroll", changeHeaderColor);
+window.addEventListener('load', changeHeaderColor);
+window.addEventListener("scroll", changeHeaderColor);

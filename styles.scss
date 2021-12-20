@@ -20,7 +20,6 @@ nav {
   justify-content: space-between;
   align-items: center;
   min-height: 8vh;
-  background-color: transparent;
   font-family: "Roboto",cursive;
   padding: 10px;
   color: white;
@@ -179,7 +178,28 @@ nav {
 .toggle .line3 {
   transform: rotate(45deg) translate(-5px,-3px);
 }
+
+.bgDark {
+  background-color: #212529;
+}
+.bgTransparent {
+  background-color: transparent;
+}
+
 // Header
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 // Introduction content
 .main-banner {
